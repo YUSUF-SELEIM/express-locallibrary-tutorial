@@ -34,9 +34,8 @@ app.use(compression()); // Compress all routes
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
-const dev_db_url =
-  "mongodb+srv://yusufabdelfattah207:IHgcvhxwAWabuGaD@cluster0.nqap4hc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
+
+const mongoDB = process.env.MONGODB_URI;
  
 main().catch((err) => console.log(err));
 async function main() {
